@@ -18,6 +18,6 @@ RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" \
   && ln -s /usr/local/bin/node /usr/local/bin/nodejs
 
 ENV NPM_VERSION 6.4.1
-RUN npm install -g npm@$NPM_VERSION
+RUN npm install -g --no-save npm@$NPM_VERSION
 
 RUN apt-get update && apt-get install -y --no-install-recommends gcc make libpng-dev
